@@ -96,6 +96,14 @@ npm install gulp
 
 `npm install` will install all the dependencies listed in your package.json file. You can define the required dependencies (including front-end libraries) there. No need for a separate `bower install`.
 
+4)  Install the starter kit's local `npm` and `bower` dependencies.
+
+```sh
+cd polymer-starter-kit && npm install && bower install
+```
+
+This installs the element sets (Paper, Iron, Platinum) and tools the starter kit requires to build and serve apps.
+
 ### Development workflow
 
 #### Serve / watch
