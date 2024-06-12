@@ -69,8 +69,10 @@ The full starter kit requires the following major dependencies:
 - npm, the node package manager, installed with Node.js and used to install Node.js packages.
 - gulp, a Node.js-based build tool.
 - bower, a Node.js-based package manager used to install front-end packages (like Polymer).
+- <strong>However, Bower is Deprecated; it's been largely deprecated in favor of npm due to its limitations and security vulnerabilities.</strong>
 
 **To install dependencies:**
+Use this recommende approach
 
 1)  Check your Node.js version.
 
@@ -82,21 +84,17 @@ The version should be at or above 0.12.x.
 
 2)  If you don't have Node.js installed, or you have a lower version, go to [nodejs.org](https://nodejs.org) and click on the big green Install button.
 
-3)  Install `gulp` and `bower` globally.
+3) Run `npm init -y` in your project directory to create a package.json file.
+Then, run `npm install gulp` to install gulp as a local dependency for your project.
 
 ```sh
-npm install -g gulp bower
+npm init -y
 ```
-
-This lets you run `gulp` and `bower` from the command line.
-
-4)  Install the starter kit's local `npm` and `bower` dependencies.
-
 ```sh
-cd polymer-starter-kit && npm install && bower install
+npm install gulp
 ```
 
-This installs the element sets (Paper, Iron, Platinum) and tools the starter kit requires to build and serve apps.
+`npm install` will install all the dependencies listed in your package.json file. You can define the required dependencies (including front-end libraries) there. No need for a separate `bower install`.
 
 ### Development workflow
 
